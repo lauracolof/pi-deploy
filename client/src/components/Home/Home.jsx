@@ -111,7 +111,7 @@ export default function Home () {
           </select>
           
           <button onClick={handleRefresh} className='refresh'>
-            Refresh
+            Clear
           </button>
         </div>
 
