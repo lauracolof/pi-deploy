@@ -8,39 +8,48 @@ export const ORDER_BY_WEIGHT = 'ORDER_BY_WEIGHT';
 export const FILTER_BY_CREATED = 'FILTER_BY_CREATED';
 export const ORDER_BY_NAME = 'ORDER_BY_NAME';
 export const FILTER_DOGS_BY_TEMPERAMENT = 'FILTER_DOGS_BY_TEMPERAMENT';
+export const POST_DOG = 'POST_DOG';
 
-
-export const getDogs = () => (dispatch) => {
-  return fetch(`http://localhost:3001/dogs`)
-    .then((response) => response.json())
-    .then((json) => {
+export const getDogs = () => {
+  return async (dispatch) => {
+    try {
+      const allDogs = await axios.get(`/dogs`);
       dispatch({
-        type: 'GET_DOGS',
-        payload: json
-      })
-    })
+        type: GET_DOGS,
+        payload: allDogs.data
+      });
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
 };
 
-export const getDogsName = (name) => (dispatch) => {
-  return fetch(`http://localhost:3001/dogs?name=${name}`)
-    .then((response) => response.json())
-    .then((json) => {
+export const getDogsName = (name) => {
+  return async (dispatch) => {
+    try {
+      const dogsName = await axios.get(`/dogs?name=${name}`);
       dispatch({
-        type: 'GET_DOGS_NAME',
-        payload: json
+        type: GET_DOGS_NAME,
+        payload: dogsName.data
       })
-    })
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
 };
 
-export const getDogTemperament = () => (dispatch) => {
-  return fetch(`http://localhost:3001/temperaments`)
-    .then((response) => response.json())
-    .then((json) => {
+export const getDogTemperament = () => {
+  return async (dispatch) => {
+    try {
+      const allTemperaments = await axios.get(`/temperaments`);
       dispatch({
-        type: 'GET_DOGS_TEMPERAMENT',
-        payload: json
-      })
-    })
+        type: GET_DOGS_TEMPERAMENT,
+        payload: allTemperaments.data
+      });
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
 };
 
 export const filterDogsByTemperament = (payload) => {
@@ -50,26 +59,28 @@ export const filterDogsByTemperament = (payload) => {
   }
 };
 
-export const getDetail = (id) => (dispatch) => {
-  return fetch(`http://localhost:3001/dogs/${id}`)
-    .then((response) => response.json())
-    .then((json) => {
+export const getDetail = (id) => {
+  return async (dispatch) => {
+    try {
+      const getOneDog = await axios.get(`/dogs/${id}`);
       dispatch({
-        type: 'GET_DETAIL',
-        payload: json
-      })
-    })
+        type: GET_DETAIL,
+        payload: getOneDog.data
+      });
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
 };
 
-export const postDog = (payload) => () => {
-  return fetch(`http://localhost:3001/dogs`, {
-    method: 'POST',
-    headers: {
-      accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload)
-  })
+export const postDog = (payload) => {
+  return async (dispatch) => {
+    const response = await axios.post('/dogs');
+    return dispatch({
+      type: POST_DOG,
+      payload: response,
+    })
+  }
 };
 
 export const orderDogsByWeight = (payload) => {
