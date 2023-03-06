@@ -1,0 +1,70 @@
+.Pagination__ul {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.list {
+  display: inline-flex;
+  padding: 1px;
+}
+
+.list > button {
+  position: sticky;
+  color: #161a1d;
+  background-color: #90a955;
+  font-size: medium;
+  font-weight: 500;
+  height: 35px;
+  width: 35px;
+  margin: 7px;
+  padding: 7px;
+  top: 165px;
+  border-radius: 25px;
+  left: 135px;
+  cursor: pointer;
+  position: relative;
+  flex-direction: row;
+
+}
+
+.list > button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.list > button:active {
+  position: relative;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 117, 218);
+}
+
+.backButton {
+  color: #161a1d;
+  background-color: #90a955;
+  font-size: medium;
+  font-weight: 500;
+  position: relative;
+  border-radius: 17px;
+  top: 102px;
+  left: 85px;
+  height: 35px;
+  width: 45px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  cursor: pointer
+}
+
+.advanceButton {
+  color: #161a1d;
+  background-color: #90a955;
+  font-size: medium;
+  font-weight: 500;
+  position: relative;
+  border-radius: 17px;
+  top: 102px; 
+  left: 1177px;
+  height: 35px;
+  width: 45px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  cursor: pointer
+}

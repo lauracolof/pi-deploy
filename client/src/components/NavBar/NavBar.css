@@ -1,0 +1,44 @@
+.navBar {
+  background: #0b090a; 
+  height: 80px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  max-width: 10%;
+  justify-content: center;
+  color: rgb(233, 231, 231);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+.Icon {
+  position: relative;
+  top: 75px;
+  opacity: 0.75;
+  width: 230px;
+}
+
+.btn {
+  position: absolute;
+  background-color: rgb(199, 199, 199);
+  left: 1070px;
+  margin: 8px;
+  top: .8vw;
+  color: black;
+  font-weight: 500;
+  border: 0;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 4px;
+  height: 30px;
+  width: 200px;
+}
