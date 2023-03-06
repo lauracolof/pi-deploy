@@ -1,9 +1,9 @@
 .searchInputs {
   display: flex;
   justify-content: right;
-  position: relative;
+  position: absolute;
   left: 30vh;
-  top: -5.2vw;
+  top: 3.7vh;
   right: 20px;
   width: 195px;
 }
@@ -18,7 +18,7 @@
   font-size: 18px;
   padding: 15px;
   height: 30px;
-  width: 245px;
+
 }
 
 .searchIcon {

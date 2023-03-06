@@ -36,7 +36,6 @@ body {
   border-left: none;
   border-bottom: none;
   border-radius: 16px;
-  margin-block-start: 3px;
   color: #161a1d;
   background-color: #90a955;
   cursor: pointer;
@@ -44,6 +43,7 @@ body {
   font-size: large;
   border: .14rem solid #161a1d;
   margin: 10px;
+  position: relative;
 }
 
 .refresh {
