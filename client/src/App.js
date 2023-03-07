@@ -6,8 +6,7 @@ import Home from './components/Home/Home';
 import CardDetail from './components/CardDetail/CardDetail'
 import './app.css';
 import DogCreate from './components/CreateDog/CreateDog';
-import axios from 'axios';
-axios.defaults.baseURL = `http://localhost:3001`;
+
 
 function App() {
   return (
