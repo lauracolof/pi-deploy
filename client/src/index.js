@@ -1,4 +1,4 @@
-import App from './App';
+import App from './router/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -9,8 +9,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 
 
-// axios.defaults.baseURL = `http://localhost:3001`;  // para actualizar
-axios.defaults.baseURL = `pi-back-deploy-production.up.railway.app`;
+axios.defaults.baseURL = `http://localhost:3001`;  // para actualizar
+// axios.defaults.baseURL = `pi-back-deploy-production.up.railway.app`;
 
 ReactDOM.render(
   <Provider store={store}>
